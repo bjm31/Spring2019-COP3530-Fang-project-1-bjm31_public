@@ -10,11 +10,13 @@ You will also need to create a Makefile to compile your program.
 Information about creating Makefiles is in your Zybook.
 
 Problem Description: 
-You will be given files in the following format: 
-numbered_answer1 question1
-numbered_answer2 question2
-numbered_answer3 question3
-numbered_answer4 question4
+You will be given files in the following format (See [questions.txt](questions.txt) for an example):
+```
+numerical_answer1 question1
+numerical_answer2 question2
+numerical_answer3 question3
+numerical_answer4 question4
+```
  
 Each line of the file composes a question and answer first, with the answer first for easier file handling.
 A file can contain any number of questions and answers.
