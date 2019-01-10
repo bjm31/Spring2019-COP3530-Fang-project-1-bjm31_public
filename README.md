@@ -9,7 +9,7 @@ You will need to be able to perform basic file input, create classes, and manipu
 You will also need to create a Makefile to compile your program.
 Information about creating Makefiles is in your Zybook.
 
-Problem Description: 
+## Problem Description: 
 You will be given files in the following format (See [questions.txt](questions.txt) for an example):
 ```
 numerical_answer1 question1
