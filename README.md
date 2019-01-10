@@ -127,7 +127,10 @@ Please make a selection:
 ```
  
 If the player chooses to play a new game, the game will prompt the player to enter a new file as they did when first running the program.
- 
+
+## Sample run
+![Sample execution of program](demo.gif)
+
 ## Code Organization for Numerical Wagers
 You will need to make sure that your code meets the following specifications:
  
@@ -141,6 +144,3 @@ You will find a rubric for the project in Canvas.
 ## Submission Instructions: 
 Make sure that your build succeeds when you push it to Github. There is information for how to do this on Canvas with an attached video.
 Make sure that your project follows all requirements under code organization.
-
-## Sample run
-![Sample execution of program](demo.gif)
