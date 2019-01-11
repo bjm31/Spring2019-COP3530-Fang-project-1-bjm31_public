@@ -68,4 +68,4 @@ TEST_CASE("Test Game object. PASS.")
 }
 
 // Compile & run:
-// g++ -std=c++11 -Wall -Itest/catch/catch.hpp -o test/TestCase test/TestCase.cpp && test/TestCase --success
+// make clean test
