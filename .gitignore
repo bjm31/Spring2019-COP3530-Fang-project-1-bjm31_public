@@ -159,7 +159,6 @@ CMakeCache.txt
 CMakeFiles
 CMakeScripts
 Testing
-Makefile
 cmake_install.cmake
 install_manifest.txt
 compile_commands.json
@@ -590,3 +589,4 @@ healthchecksdb
 
 # End of https://www.gitignore.io/api/c,c++,clion,cmake,eclipse,visualstudio,premake-gmake,visualstudiocode
 main
+TestCase
