@@ -50,11 +50,11 @@ TEST_CASE("Test Game object. PASS.")
 	REQUIRE (game.GetCurrentScore() == 200);
 	
 	game.SetWager(99);
-	game.AdjustPoints(TRUE); // winner
+	game.AdjustPoints(true); // winner
 	REQUIRE (game.GetCurrentScore() == 299);
 
 	game.SetWager(50);
-	game.AdjustPoints(FALSE); // loser
+	game.AdjustPoints(false); // loser
 	REQUIRE (game.GetCurrentScore() == 249);
 
 	game.SetWager(77);
