@@ -183,7 +183,7 @@ This class is a container class that is responsible for reading the input file a
 	* This function should return a question from the list for use by the Game class, described below.
 
 ### The Game Class
-~[UML of the Game class](http://www.plantuml.com/plantuml/png/LOynheCm38Ptdy9ZU8WBCC7hmDgAeNDAh8e2iHexNQhUlQc0g9qIVv_yssv4RT2up33CLWGxkn0yeRf74XtPIusdxVjl_VI7KDc5ezUplL8WL-Fe5QeXXa1U-u43hGZAJvGfjlSdf4YsbMbdQ8grfspTBOeUEHM2vi8y9_FWqK7PqpeIJPAPTfdk4OaSlfR9uWKDUPSEVGC0)
+![UML of the Game class](http://www.plantuml.com/plantuml/png/LOynheCm38Ptdy9ZU8WBCC7hmDgAeNDAh8e2iHexNQhUlQc0g9qIVv_yssv4RT2up33CLWGxkn0yeRf74XtPIusdxVjl_VI7KDc5ezUplL8WL-Fe5QeXXa1U-u43hGZAJvGfjlSdf4YsbMbdQ8grfspTBOeUEHM2vi8y9_FWqK7PqpeIJPAPTfdk4OaSlfR9uWKDUPSEVGC0)
 
 This class is used to implement the game itself and is responsible for interacting with the user, updating the score, etc.
 
