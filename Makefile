@@ -9,7 +9,7 @@ main: main.o $(OBJECTS)
 
 $(OBJECTS): $(HEADERS)
 
-testBuild: main
+testBuild: $(OBJECTS)
 	$(CXX) $(CXXFLAGS) -Itest/catch/catch.hpp -o test/TestCase $(OBJECTS) test/TestCase.cpp
 
 test: clean testBuild
