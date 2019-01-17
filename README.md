@@ -1,6 +1,5 @@
 # COP 3530 - Data Structures and Algorithms I 
 # Project 1 
-## Due: Sunday, February 3rd 11:59 P.M. CST 
 
 ## Objective: 
 This project is meant to help you review concepts of programming in C++ while also getting used to the environment for this course.
