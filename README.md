@@ -51,7 +51,7 @@ You can build out most (if not all) of the functionality your main class will ne
 As a matter of fact, your main class can use some of the declarations and method calls in exactly the same way as the unit tests.
 
 ## Creating the Game 
-You are required to implement the classes described below ([Code Organization for Numerical Wagers](code-organization-for-numerical-wagers)), and a main.cpp.
+You are required to implement the classes described below ([Code Organization for Numerical Wagers](#code-organization-for-numerical-wagers)), and a main.cpp.
 Each class should be divided into a .cpp and .hpp file.
 Upon the start of the game, your terminal should display the following:
 ```
