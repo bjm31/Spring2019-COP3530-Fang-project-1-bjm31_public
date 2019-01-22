@@ -38,8 +38,8 @@ TEST_CASE("Test Question object. PASS.")
 
 TEST_CASE("Test QuestionBank object. PASS.")
 {
-	QuestionBank questions = QuestionBank("questions.txt");
-	Question q = questions.GetNextQuestion();
+	QuestionBank *questions = new QuestionBank("questions.txt");
+	Question q = questions->GetNextQuestion();
 	REQUIRE (q.GetText() != "");
 }
 
