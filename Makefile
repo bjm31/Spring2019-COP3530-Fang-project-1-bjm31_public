@@ -2,7 +2,7 @@ CXX = g++
 CXXFLAGS = -std=c++11 -Wall
 
 OBJECTS = game.o question.o question_bank.o
-HEADERS = $(shell find . -path ./test -prune -o -name "*.hpp" -print)
+HEADERS = $(shell find . -path ./test -prune -o -name "*.h" -print)
 
 main: main.o $(OBJECTS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
