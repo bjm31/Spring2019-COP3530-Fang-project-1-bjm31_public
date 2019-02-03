@@ -20,7 +20,10 @@ public:
 	}
 	int AskQuestion();
 	void AdjustPoints(bool isGuessCorrect);
-	void SetWager(int amountWagered) { this->amountWagered = amountWagered; }
+	void SetWager(int wager) { 
+		if (wager < 0) amountWagered = 0;
+		this->amountWagered = wager;
+	}
 	int GetWager() { return amountWagered; }
 	int GetCurrentScore() { return currentScore; }
 
