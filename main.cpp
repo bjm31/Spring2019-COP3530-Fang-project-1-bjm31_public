@@ -26,17 +26,20 @@ int main() {
 	int choice = 0;
 	int numQ = 0;
 
-	while (choice != -1) {
+	do {
 		cout << "Question #" << ++numQ << endl;
 		cout << "Current score: " << game.GetCurrentScore() << endl;
-		cs += game.AskQuestion();
+		cs = game.AskQuestion();
 
 		if (cs <= 0) choice = -1;
-	}
 
+	} while (choice != -1);
+	
+	int finalScore = game.GetCurrentScore();
 	cout << "#############################\n";
-	cout << "Final score: " << game.GetCurrentScore() << endl;
-	cout << "You beat the house! Congrats!\n";
+	cout << "Final score: " << finalScore << endl;
+	if (finalScore > 0) cout << "You beat the house! Congrats!\n";
+	else cout << "Better luck next time!\n";
 
 	return 0;
 }

@@ -20,12 +20,15 @@ public:
 	string GetText() { return text; }
 
 	bool AnswerContainsDigit(char digit) {
-		if (answer.find(digit) >= 0) return true;
+		int check = answer.find(digit);
+		cout << "check: " << check << endl;
+		if (check >= 0) return true;
 		else return false;
 	}
-	
-	string GetAnswerWithPlaceholders(vector<char> goodGuesses) {
+	string GetAnswerWithPlaceholders(vector<char> goodGuesses) { 
 		string ph = "";
+		for (int s = 0; s < answer.size(); ++s) ph += "_";
+
 		for (int i = 0; i < answer.size(); ++i) {
 			if (goodGuesses.empty())
 				break;
@@ -33,8 +36,6 @@ public:
 				for (int j = 0; j < goodGuesses.size(); ++j) {
 					if (answer.at(i) == goodGuesses.at(j))
 						ph.at(i) = answer.at(i);
-					else
-						ph.at(i) = '_';
 				}
 			}
 		}

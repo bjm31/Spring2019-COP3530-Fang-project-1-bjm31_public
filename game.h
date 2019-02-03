@@ -22,7 +22,7 @@ public:
 		Question qstn;
 		int wager = 0;
 		char guess;
-		bool isDigit = false;
+		bool isDigit;
 		vector<char> correctGuesses;
 		string incorrectGuesses = "";
 		int numIncorrectGuesses = 0;
@@ -39,28 +39,32 @@ public:
 		SetWager(wager);
 		
 		cout << "Guess a digit: ";
-		while (numIncorrectGuesses < 3) {
-		
+		do {
+			string junk;
 			cin >> guess;
-
-			cout << "Guess #1: " << guess << endl;
-
+			getline(cin, junk);
 			isDigit = qstn.AnswerContainsDigit(guess);
-
-			cout << isDigit;
 
 			if (isDigit) {
 				correctGuesses.push_back(guess);
+				cout << "isDigit = true\n";
 			}
 			else if (!isDigit && numIncorrectGuesses != 3) {
 				++numIncorrectGuesses;
-				incorrectGuesses += "~" + to_string(guess) + "~";
-				cout << "Guess again: ";
+				cout << "numIncorrectGuesses = " << numIncorrectGuesses << endl;
+				incorrectGuesses += "~";
+				incorrectGuesses += guess;
+				incorrectGuesses += "~";
 			}
-			cout <<	qstn.GetAnswerWithPlaceholders(correctGuesses) << "\t";
+			string answers = qstn.GetAnswerWithPlaceholders(correctGuesses);
+			cout << answers	<< "\t";
 			cout << incorrectGuesses << endl;
-		}
+			isCorrect = qstn.AllDigitsGuessed(answers);
+			if (!isCorrect) cout << "Guess again: ";
+		} while (numIncorrectGuesses < 3 && !isCorrect);
+
 		AdjustPoints(isCorrect);
+		
 		return currentScore;
 	}
 	void AdjustPoints(bool isGuessCorrect) {
@@ -70,12 +74,12 @@ public:
 		}
 		else {
 			currentScore -= amountWagered;
-			cout << "You lost " << GetCurrentScore() << " points!" << endl;
+			cout << "You lost " << GetWager() << " points!" << endl;
 		}
 	}
-	void SetWager(int amountWagered) { this->amountWagered = amountWagered; };
-	int GetWager() { return amountWagered; };
-	int GetCurrentScore() { return currentScore; };
+	void SetWager(int amountWagered) { this->amountWagered = amountWagered; }
+	int GetWager() { return amountWagered; }
+	int GetCurrentScore() { return currentScore; }
 
 private:
 	QuestionBank* questions;

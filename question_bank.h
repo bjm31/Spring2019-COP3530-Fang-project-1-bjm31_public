@@ -27,7 +27,6 @@ public:
 		if (questions.size() == 0) return Question();
 		
 		Question qstn = questions.at(0);
-		if (questions.empty())
 		questions.erase(questions.begin());
 		
 		return qstn;
