@@ -36,6 +36,6 @@ void QuestionBank::LoadQuestions() {
 		questionsFile >> ans;
 		getline(questionsFile, qstn);
 
-		questions.emplace_back(ans, qstn);
+		questions.emplace_back(qstn, ans);
 	}
 }

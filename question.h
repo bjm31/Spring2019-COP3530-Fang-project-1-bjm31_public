@@ -13,7 +13,7 @@ public:
 		this->answer = "";
 		this->text = ""; 
 	}
-	Question(string answer, string text) { 
+	Question(string text, string answer) { 
 		this->answer = answer; 
 		this->text = text; 
 	}
