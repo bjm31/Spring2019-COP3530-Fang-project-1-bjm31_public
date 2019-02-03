@@ -12,42 +12,15 @@ using namespace std;
 
 class QuestionBank {
 public:
-	QuestionBank();
-	QuestionBank(string fileName) {
-
-		questionsFile.open(fileName);
-		if (!questionsFile.is_open()) {
-			cout << "Could not open file " << questionsFile << endl;
-		}
-		else LoadQuestions();
-		questionsFile.close();
-	}
-	Question GetNextQuestion() {
-		
-		if (questions.size() == 0) return Question();
-		
-		Question qstn = questions.at(0);
-		questions.erase(questions.begin());
-		
-		return qstn;
-	}
+	QuestionBank() {};
+	QuestionBank(string fileName);
+	Question GetNextQuestion();
 
 private:
 	vector<Question> questions;
 	ifstream questionsFile;
-	void LoadQuestions() {
 
-		while (questionsFile.good()) {
-			string ans;
-			string qstn;
-			Question question;
-
-			questionsFile >> ans;
-			getline(questionsFile, qstn);
-
-			questions.emplace_back(ans, qstn);
-		}
-	}
+	void LoadQuestions();
 };
 
 #endif

@@ -22,14 +22,12 @@ int main() {
 	ptrQB = &qb;
 	Game game = Game(ptrQB);
 	
-	int cs = 0;
 	int choice = 0;
 	int numQ = 0;
-
 	do {
 		cout << "Question #" << ++numQ << endl;
 		cout << "Current score: " << game.GetCurrentScore() << endl;
-		cs = game.AskQuestion();
+		int cs = game.AskQuestion();
 
 		if (cs <= 0) choice = -1;
 
