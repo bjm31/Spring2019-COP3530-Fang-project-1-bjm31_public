@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-//#include "game.h"
+#include "game.h"
 #include "question.h"
 #include "question_bank.h"
 
@@ -15,7 +15,14 @@ int main() {
 	
 	cin >> fileName;
 
-	//QuestionBank qb = QuestionBank(fileName);
+	QuestionBank qb(fileName);
+
+	QuestionBank* ptrQB;
+	
+	ptrQB = &qb;
+
+	Game game = Game(ptrQB);
+
 
 	return 0;
 }
