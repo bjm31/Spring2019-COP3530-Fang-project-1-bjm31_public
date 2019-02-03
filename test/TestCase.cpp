@@ -2,7 +2,7 @@
 #define CATCH_CONFIG_MAIN
 
 #include <vector>
-#include "catch/catch.h"
+#include "catch/catch.hpp"
 #include "../question.h"
 #include "../question_bank.h"
 #include "../game.h"
