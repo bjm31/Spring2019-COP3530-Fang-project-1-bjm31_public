@@ -10,15 +10,11 @@ using namespace std;
 
 QuestionBank::QuestionBank(string fileName) {
 
-		questionsFile.open(fileName);
+	questionsFile.open(fileName);
 
-		if (!questionsFile.is_open()) {
-			cout << "Could not open file " << questionsFile << endl;
-		}
+	if (questionsFile.is_open()) LoadQuestions();
 		
-		else LoadQuestions();
-		
-		questionsFile.close();
+	questionsFile.close();
 }
 Question QuestionBank::GetNextQuestion() {
 

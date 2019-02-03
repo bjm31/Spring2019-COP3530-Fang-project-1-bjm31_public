@@ -63,3 +63,8 @@ void Game::AdjustPoints(bool isGuessCorrect) {
 		cout << "You lost " << GetWager() << " points!" << endl;
 	}
 }
+void Game::SetWager(int wager) {
+	if (wager < 0) wager = 1;
+	else if (wager > currentScore) wager = currentScore;
+	this->amountWagered = wager;
+}
