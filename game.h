@@ -21,7 +21,7 @@ public:
 	int AskQuestion();
 	void AdjustPoints(bool isGuessCorrect);
 	void SetWager(int wager) { 
-		if (wager < 0) amountWagered = 0;
+		if (wager < 0) wager = 1;
 		this->amountWagered = wager;
 	}
 	int GetWager() { return amountWagered; }
