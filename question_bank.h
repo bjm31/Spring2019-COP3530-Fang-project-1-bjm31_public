@@ -21,8 +21,17 @@ public:
 		}
 		else LoadQuestions();
 		questionsFile.close();
-	};
-	Question GetNextQuestion() { return Question(); };
+	}
+	Question GetNextQuestion() {
+		
+		if (questions.size() == 0) return Question();
+		
+		Question qstn = questions.at(0);
+		if (questions.empty())
+		questions.erase(questions.begin());
+		
+		return qstn;
+	}
 
 private:
 	vector<Question> questions;
@@ -32,15 +41,14 @@ private:
 		while (questionsFile.good()) {
 			string ans;
 			string qstn;
-			string junk;
 			Question question;
 
-			questionsFile >> ans >> junk; //junk is space char between ans and qstn on file line
+			questionsFile >> ans;
 			getline(questionsFile, qstn);
 
-			questions.push_back(Question(ans, qstn));
+			questions.emplace_back(ans, qstn);
 		}
-	};
+	}
 };
 
 #endif
