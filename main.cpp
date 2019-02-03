@@ -14,8 +14,8 @@ int main() {
 	cout << "Welcome to Numberical Wagers!\n";
 	cout << "Please enter the name of the file containing your questions: ";
 
-	//cin >> fileName;
-	fileName = "questions.txt";
+	cin >> fileName;
+	//fileName = "questions.txt";
 
 	QuestionBank qb(fileName);
 	QuestionBank* ptrQB;
