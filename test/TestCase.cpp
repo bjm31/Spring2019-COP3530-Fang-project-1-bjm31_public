@@ -2,10 +2,10 @@
 #define CATCH_CONFIG_MAIN
 
 #include <vector>
-#include "catch/catch.hpp"
-#include "../question.hpp"
-#include "../question_bank.hpp"
-#include "../game.hpp"
+#include "catch/catch.h"
+#include "../question.h"
+#include "../question_bank.h"
+#include "../game.h"
 
 TEST_CASE("Test Question object. PASS.")
 {
